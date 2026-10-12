@@ -1,0 +1,6 @@
+{
+  "name": "Semesta",
+  "description": "Aplikasi belajar fisika dan matematika dari nol sampai ahli dengan materi bertingkat, simulasi interaktif, cerita bergambar, dan studi kasus industri.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

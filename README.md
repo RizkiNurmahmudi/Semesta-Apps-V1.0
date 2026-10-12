@@ -80,22 +80,25 @@ Semesta/
 │   ├── data/
 │   │   ├── achievement/          # Registry 25 Lencana & Achievement Engine
 │   │   ├── curriculum/           # Data 261 Kurikulum (Math, Phys, Chem, Bio)
-│   │   ├── diagnostic/           # Bank Soal & Mesin Placement Test
+│   │   ├── diagnostic/           # Bank Soal & Mesin Placement Test Adaptif
 │   │   ├── export/               # Model Raport Akademik Siswa
 │   │   ├── local/                # Room Database Entities & DAOs
 │   │   ├── model/                # Model Data Kurikulum, Level & Domain
 │   │   └── repository/           # SemestaRepository (Single Source of Truth)
 │   ├── ui/
-│   │   ├── components/           # Celebration Dialog, Navbar, dsb.
-│   │   ├── screens/              # LessonScreen, CatalogScreen, PlacementTestScreen, ProfileScreen
-│   │   ├── simulation/           # SimulationDispatcher & 3-Tier Simulation Canvas
-│   │   ├── theme/                # Palet Warna Kosmik, Tipografi, Shape
-│   │   └── viewmodel/            # SemestaViewModel & Navigasi Antar Layar
+│   │   ├── components/           # SemestaDesignComponents, SemestaWelcomeDialog, LessonTreeView, Navbar
+│   │   ├── screens/              # CatalogScreen, LessonScreen, PlacementTestScreen, ProfileScreen, ProgressScreen, SkillMapScreen
+│   │   ├── simulation/           # SimulationDispatcher & 3-Tier Simulation Canvas (Universal Formula Sandbox)
+│   │   ├── theme/                # Palet Warna Kosmik, Semesta Brand Colors (#1E6FB8, #89CFF0, #FFC53D), Tipografi
+│   │   └── viewmodel/            # SemestaViewModel & State Management
 │   └── util/
-│       └── pdf/                  # PdfDocumentManager (Generator PDF Canvas Native)
+│       ├── audio/                # SemestaAudioEngine (Sintesis WAV Prosedural Digital SoundPool 0-Byte)
+│       ├── feedback/             # SemestaFeedbackManager (CompositionLocal & SharedPreferences)
+│       ├── haptics/              # SemestaHaptics (Vibrator & Haptic Pulse API 24-34+)
+│       └── pdf/                  # PdfDocumentManager (Generator PDF Canvas Native Luring)
 └── app/src/main/res/
-    ├── xml/                      # file_paths.xml (FileProvider Android)
-    └── ...
+    ├── drawable/                 # Semesta Hero Banner & Discovery Lab Artwork (Google Imagen / Nano Banana)
+    └── xml/                      # file_paths.xml (FileProvider Android)
 ```
 
 ---
@@ -120,13 +123,13 @@ Semesta/
 
 | Urutan | Fase Pengembangan | Fokus Deliverable Utama | Status |
 | :---: | :--- | :--- | :---: |
-| **1** | **Simulasi 3-Tingkat & Lab Nyata** | Dedicated Labs, Domain Engines, Universal Sandbox, & Home Lab | ✅ **100% Selesai** |
-| **2** | **Gamifikasi & Badges Engine** | 25 Lencana, Achievement Evaluator, Dialog Animasi, & Profil | ✅ **100% Selesai** |
+| **1** | **Simulasi 3-Tingkat & Lab Nyata** | Dedicated Labs, Domain Engines, Universal Sandbox, & Home Lab Notebook | ✅ **100% Selesai** |
+| **2** | **Gamifikasi & Badges Engine** | 25 Lencana, Achievement Evaluator, Dialog Animasi, & Galeri Profil | ✅ **100% Selesai** |
 | **3** | **Placement Test Adaptif** | Diagnostik 20 Soal, Radar Penguasaan, Rekomendasi Adaptif, +50 XP | ✅ **100% Selesai** |
-| **4** | **Ekspor Raport & Sertifikat PDF** | Generator PDF Sertifikat Emas, Raport Akademik, & Share Intent | ✅ **100% Selesai** |
-| **5** | **Audio, Haptik & Sentuhan Taktil** | Umpan balik getaran taktil, efek suara kuis/lencana, SoundPool | 🔄 **Sedang Dikerjakan** |
-| **6** | **UI/UX Polish & Modern Dark Mode**| Material 3, Glassmorphism, Micro-animations, Tipografi responsif | ⏳ Menunggu |
-| **7** | **Testing Otomatis & QA** | Pengujian unit kurikulum, simulasi, database, & memori | ⏳ Menunggu |
+| **4** | **Ekspor Raport & Sertifikat PDF** | Generator PDF Sertifikat Emas, Raport Akademik, & Android Share Intent | ✅ **100% Selesai** |
+| **5** | **Audio & Haptik Taktil** | SoundPool WAV prosedural (0 byte asset), haptik API 24-34+, & toggle aksesibilitas | ✅ **100% Selesai** |
+| **6** | **UI/UX & Translasi Desain GitHub**| Blueprint Desain-Semesta-Mobile, Logo Atom, Avatar Keluarga, Regenerasi Visual Nano Banana | ✅ **100% Selesai** |
+| **7** | **Testing Otomatis & QA** | Pengujian unit kurikulum, simulasi, database, & memori | 🔄 **Berikutnya** |
 | **8** | **Rilis Google Play Store** | Keystore rilis, ProGuard R8, aset toko, dan bundle `.aab` | ⏳ Menunggu |
 
 ---
@@ -134,13 +137,14 @@ Semesta/
 ## 🎨 Desain Antarmuka & Strategi Ekosistem Google (Nano Banana)
 
 Pengembangan antarmuka Semesta Versi 1.0 mengadopsi **100% efisiensi biaya (*zero subscription fee*)** dengan rujukan langsung ke repositori desain resmi:
+- **Repositori Utama Android**: 👉 **[Semesta-Apps-V1.0 (GitHub)](https://github.com/RizkiNurmahmudi/Semesta-Apps-V1.0)** *(Kotlin + Jetpack Compose)*
 - **Repositori Desain Mobile**: 👉 **[Desain-Semesta-Mobile (GitHub)](https://github.com/RizkiNurmahmudi/Desain-Semesta-Mobile.git)** *(React + TypeScript)*
 - **Dokumen Panduan Implementasi**: 👉 **[`PANDUAN_DESAIN_DAN_EKOSISTEM_GOOGLE.md`](./PANDUAN_DESAIN_DAN_EKOSISTEM_GOOGLE.md)**
 
 ### Keunggulan Alur Kerja Ini:
 1. **Acuan Desain 1-ke-1**: Seluruh 11 layar (Splash, Profile Picker, Catalog, Detail Konsep, Story Viewer, Simulasi, Kuis, Map, Dasbor) telah memiliki acuan visual yang jelas dan orisinil buatan pengembang.
-2. **Generasi Aset via Google AI (Nano Banana)**: Pembuatan gambar, ikon materi, dan ilustrasi dilakukan langsung menggunakan generator AI gambar Google/Gemini tanpa biaya langganan tambahan.
-3. **Audio & Haptik Native**: Efek suara sintetis SoundPool dan getaran taktil Android yang ringan dan instan.
+2. **Generasi Aset via Google AI (Nano Banana / Imagen)**: Menghindari *AI slop* dengan membuat karya seni digital resolusi tinggi (`semesta_hero_banner.jpg` dan `semesta_discovery_lab.jpg`) bertema pelajar Indonesia berseragam rapi tanpa biaya langganan tambahan.
+3. **Audio Prosedural & Haptik Native**: Efek suara disintesis secara programatik tanpa membebani ukuran APK dan getaran taktil berjenjang untuk Android 7.0 hingga 14+.
 4. **Fokus Rilis Google Play Store**: Memaksimalkan kestabilan aplikasi untuk rilis versi perdana di Play Store.
 
 *(Catatan: Referensi prompt untuk ChatGPT & Higgsfield tetap diarsipkan di [`UIUX_CHATGPT_HANDOFF_GUIDE.md`](./UIUX_CHATGPT_HANDOFF_GUIDE.md) untuk ekspansi Versi 2.0 di masa depan).*

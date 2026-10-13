@@ -138,17 +138,17 @@ object MathLevel4Curriculum {
         intuitionTitle = "Fondasi Rigor Kalkulus: Dari Intuitif Menuju Keabsahan Analisis Real",
         intuitionBody = "Kalkulus modern dibangun di atas fondasi limit analitis formal yang dirumuskan oleh Augustin-Louis Cauchy dan Karl Weierstrass untuk menyingkirkan paradoks konsep 'bilangan tak hingga kecil' (infinitesimal).\n\n" +
                 "1. Definisi Presisi Limit Epsilon-Delta (ε-δ):\n" +
-                "   Dikatakan $\\lim_{x \\to c} f(x) = L$ jika dan hanya jika:\n" +
-                "   $$\\forall \\epsilon > 0, \\; \\exists \\delta > 0 \\; \\text{sehingga} \\; 0 < |x - c| < \\delta \\implies |f(x) - L| < \\epsilon$$\n" +
-                "   • Makna Intuitif: Anda dapat membuat $f(x)$ sedekat mungkin ke target $L$ (dalam radius $\\epsilon$) cukup dengan memilih $x$ yang cukup dekat ke $c$ (dalam radius $\\delta$).\n\n" +
+                "   Dikatakan \${'$'}\\lim_{x \\to c} f(x) = L\${'$'} jika dan hanya jika:\n" +
+                "   \${'$'}\${'$'}\\forall \\epsilon > 0, \\; \\exists \\delta > 0 \\; \\text{sehingga} \\; 0 < |x - c| < \\delta \\implies |f(x) - L| < \\epsilon\${'$'}\${'$'}\n" +
+                "   • Makna Intuitif: Anda dapat membuat \${'$'}f(x)\${'$'} sedekat mungkin ke target \${'$'}L\${'$'} (dalam radius \${'$'}\\epsilon\${'$'}) cukup dengan memilih \${'$'}x\${'$'} yang cukup dekat ke \${'$'}c\${'$'} (dalam radius \${'$'}\\delta\${'$'}).\n\n" +
                 "2. Kekontinuan Fungsi pada Interval:\n" +
-                "   Fungsi $f$ kontinu di titik $c$ jika $\\lim_{x \\to c} f(x) = f(c)$.\n" +
-                "   • Syarat 1: $f(c)$ terdefinisi (tidak ada lubang pada domain).\n" +
-                "   • Syarat 2: Limit kiri $\\lim_{x \\to c^-} f(x)$ sama dengan limit kanan $\\lim_{x \\to c^+} f(x)$ (tidak ada loncatan/asuransi vertikal).\n" +
+                "   Fungsi \${'$'}f\${'$'} kontinu di titik \${'$'}c\${'$'} jika \${'$'}\\lim_{x \\to c} f(x) = f(c)\${'$'}.\n" +
+                "   • Syarat 1: \${'$'}f(c)\${'$'} terdefinisi (tidak ada lubang pada domain).\n" +
+                "   • Syarat 2: Limit kiri \${'$'}\\lim_{x \\to c^-} f(x)\${'$'} sama dengan limit kanan \${'$'}\\lim_{x \\to c^+} f(x)\${'$'} (tidak ada loncatan/asuransi vertikal).\n" +
                 "   • Syarat 3: Nilai limit sama dengan nilai fungsi.\n\n" +
                 "3. Teorema Nilai Antara (Intermediate Value Theorem / IVT):\n" +
-                "   Jika $f$ kontinu pada selang tertutup $[a, b]$ dan $u$ adalah sembarang nilai di antara $f(a)$ dan $f(b)$, maka terdapat setidaknya satu nilai $c \\in (a, b)$ sedemikian rupa sehingga $f(c) = u$.\n" +
-                "   • Teorema Bolzano (Pencarian Akar): Jika $f(a) \\cdot f(b) < 0$, maka terdapat setidaknya satu akar riil $c \\in (a, b)$ di mana $f(c) = 0$. Teorema ini menjadi dasar algoritma komputasi Biseksi.",
+                "   Jika \${'$'}f\${'$'} kontinu pada selang tertutup \${'$'}[a, b]\${'$'} dan \${'$'}u\${'$'} adalah sembarang nilai di antara \${'$'}f(a)\${'$'} dan \${'$'}f(b)\${'$'}, maka terdapat setidaknya satu nilai \${'$'}c \\in (a, b)\${'$'} sedemikian rupa sehingga \${'$'}f(c) = u\${'$'}.\n" +
+                "   • Teorema Bolzano (Pencarian Akar): Jika \${'$'}f(a) \\cdot f(b) < 0\${'$'}, maka terdapat setidaknya satu akar riil \${'$'}c \\in (a, b)\${'$'} di mana \${'$'}f(c) = 0\${'$'}. Teorema ini menjadi dasar algoritma komputasi Biseksi.",
         intuitionPoints = listOf(
             "Nilai delta (δ) selalu bergantung pada pilihan epsilon (ε) yang diberikan dan titik c (δ = δ(ε, c)).",
             "Fungsi Dirichlet f(x) = 1 jika x rasional dan f(x) = 0 jika x irasional adalah contoh fungsi yang tidak kontinu di SETIAP titik garis bilangan riil!",
@@ -287,17 +287,17 @@ object MathLevel4Curriculum {
         intuitionTitle = "Dinamika Laju Perubahan Lanjut: Teori Diferensial Analitis",
         intuitionBody = "Kalkulus diferensial formal melampaui aturan turunan dasar aljabar dengan menyajikan teorema-teorema keberadaan analitis serta teknik evaluasi limit tak tentu.\n\n" +
                 "1. Teorema Nilai Rata-Rata (Mean Value Theorem / MVT):\n" +
-                "   Jika fungsi $f$ kontinu pada $[a, b]$ dan terturunkan (*differentiable*) pada $(a, b)$, maka terdapat setidaknya satu nilai $c \\in (a, b)$ sedemikian rupa sehingga:\n" +
-                "   $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$\n" +
-                "   • Interpretasi Geometri: Terdapat titik $c$ di mana garis singgung kurva sejajar persis dengan garis sekan yang menghubungkan titik ujung $(a, f(a))$ dan $(b, f(b))$.\n" +
-                "   • Teorema Rolle (Kasus Khusus): Jika $f(a) = f(b)$, maka terdapat $c \\in (a, b)$ dengan $f'(c) = 0$.\n\n" +
+                "   Jika fungsi \${'$'}f\${'$'} kontinu pada \${'$'}[a, b]\${'$'} dan terturunkan (*differentiable*) pada \${'$'}(a, b)\${'$'}, maka terdapat setidaknya satu nilai \${'$'}c \\in (a, b)\${'$'} sedemikian rupa sehingga:\n" +
+                "   \${'$'}\${'$'}f'(c) = \\frac{f(b) - f(a)}{b - a}\${'$'}\${'$'}\n" +
+                "   • Interpretasi Geometri: Terdapat titik \${'$'}c\${'$'} di mana garis singgung kurva sejajar persis dengan garis sekan yang menghubungkan titik ujung \${'$'}(a, f(a))\${'$'} dan \${'$'}(b, f(b))\${'$'}.\n" +
+                "   • Teorema Rolle (Kasus Khusus): Jika \${'$'}f(a) = f(b)\${'$'}, maka terdapat \${'$'}c \\in (a, b)\${'$'} dengan \${'$'}f'(c) = 0\${'$'}.\n\n" +
                 "2. Aturan L'Hôpital untuk Bentuk Tak Tentu:\n" +
-                "   Jika $\\lim_{x \\to c} \\frac{f(x)}{g(x)}$ menghasilkan bentuk tak tentu $\\frac{0}{0}$ atau $\\frac{\\pm \\infty}{\\pm \\infty}$, dan $\\lim_{x \\to c} \\frac{f'(x)}{g'(x)}$ ada, maka:\n" +
-                "   $$\\lim_{x \\to c} \\frac{f(x)}{g(x)} = \\lim_{x \\to c} \\frac{f'(x)}{g'(x)}$$\n" +
-                "   *Catatan:* Bentuk tak tentu lain ($0 \\cdot \\infty$, $\\infty - \\infty$, $1^\\infty$, $0^0$, $\\infty^0$) harus diubah terlebih dahulu ke bentuk $\\frac{0}{0}$ atau $\\frac{\\infty}{\\infty}$ via manipulasi aljabar atau logaritma natural $\\ln$.\n\n" +
+                "   Jika \${'$'}\\lim_{x \\to c} \\frac{f(x)}{g(x)}\${'$'} menghasilkan bentuk tak tentu \${'$'}\\frac{0}{0}\${'$'} atau \${'$'}\\frac{\\pm \\infty}{\\pm \\infty}\${'$'}, dan \${'$'}\\lim_{x \\to c} \\frac{f'(x)}{g'(x)}\${'$'} ada, maka:\n" +
+                "   \${'$'}\${'$'}\\lim_{x \\to c} \\frac{f(x)}{g(x)} = \\lim_{x \\to c} \\frac{f'(x)}{g'(x)}\${'$'}\${'$'}\n" +
+                "   *Catatan:* Bentuk tak tentu lain (\${'$'}0 \\cdot \\infty\${'$'}, \${'$'}\\infty - \\infty\${'$'}, \${'$'}1^\\infty\${'$'}, \${'$'}0^0\${'$'}, \${'$'}\\infty^0\${'$'}) harus diubah terlebih dahulu ke bentuk \${'$'}\\frac{0}{0}\${'$'} atau \${'$'}\\frac{\\infty}{\\infty}\${'$'} via manipulasi aljabar atau logaritma natural \${'$'}\\ln\${'$'}.\n\n" +
                 "3. Turunan Implisit & Laju yang Berkaitan (*Related Rates*):\n" +
-                "   Banyak persamaan fisika tidak berbentuk eksplisit $y = f(x)$, melainkan $F(x, y) = 0$ (contoh: lingkaran $x^2 + y^2 = r^2$). Dengan menerapkan aturan rantai diferensiasi terhadap variabel bebas waktu $t$:\n" +
-                "   $$2x \\frac{dx}{dt} + 2y \\frac{dy}{dt} = 0 \\implies \\frac{dy}{dt} = -\\frac{x}{y} \\frac{dx}{dt}$$",
+                "   Banyak persamaan fisika tidak berbentuk eksplisit \${'$'}y = f(x)\${'$'}, melainkan \${'$'}F(x, y) = 0\${'$'} (contoh: lingkaran \${'$'}x^2 + y^2 = r^2\${'$'}). Dengan menerapkan aturan rantai diferensiasi terhadap variabel bebas waktu \${'$'}t\${'$'}:\n" +
+                "   \${'$'}\${'$'}2x \\frac{dx}{dt} + 2y \\frac{dy}{dt} = 0 \\implies \\frac{dy}{dt} = -\\frac{x}{y} \\frac{dx}{dt}\${'$'}\${'$'}",
         intuitionPoints = listOf(
             "Aturan L'Hôpital BUKAN turunan hasil bagi (Quotient Rule); Anda menurunkan pembilang sendiri dan menurunkan penyebut sendiri secara terpisah!",
             "Uji Turunan Kedua f''(c) menentukan kecekungan kurva: jika f''(c) > 0 kurva cekung ke atas (titik minimum lokal), jika f''(c) < 0 kurva cekung ke bawah (titik maksimum lokal).",
@@ -439,23 +439,23 @@ object MathLevel4Curriculum {
         intuitionBody = "Kalkulus integral adalah mesin matematika untuk menghitung akumulasi total kuantitas kontinu dari laju perubahan lokalnya, menghubungkan geometri luas dengan konsep antiturunan.\n\n" +
                 "1. Teorema Dasar Kalkulus (Fundamental Theorem of Calculus / FTC):\n" +
                 "   • FTC Bagian 1 (Diferensiasi Akumulasi):\n" +
-                "     Jika $f$ kontinu pada $[a, b]$ dan $g(x) = \\int_a^x f(t)\\, dt$, maka $g'(x) = f(x)$. Integrasi dan diferensiasi adalah operasi balikan (*invers*).\n" +
+                "     Jika \${'$'}f\${'$'} kontinu pada \${'$'}[a, b]\${'$'} dan \${'$'}g(x) = \\int_a^x f(t)\\, dt\${'$'}, maka \${'$'}g'(x) = f(x)\${'$'}. Integrasi dan diferensiasi adalah operasi balikan (*invers*).\n" +
                 "   • FTC Bagian 2 (Evaluasi Nilai Tentu):\n" +
-                "     $$\\int_a^b f(x)\\, dx = F(b) - F(a) \\quad \\text{di mana } F'(x) = f(x)$$\n\n" +
+                "     \${'$'}\${'$'}\\int_a^b f(x)\\, dx = F(b) - F(a) \\quad \\text{di mana } F'(x) = f(x)\${'$'}\${'$'}\n\n" +
                 "2. Kotak Alat Teknik Integrasi Mahir:\n" +
                 "   • Integrasi Parsial (Integration by Parts): Diturunkan dari aturan perkalian turunan:\n" +
-                "     $$\\int u\\, dv = u v - \\int v\\, du$$\n" +
-                "     *Panduan LIATE* untuk memilih $u$: Logaritmik, Invers trigonometri, Aljabar, Trigonometri, Eksponensial.\n" +
+                "     \${'$'}\${'$'}\\int u\\, dv = u v - \\int v\\, du\${'$'}\${'$'}\n" +
+                "     *Panduan LIATE* untuk memilih \${'$'}u\${'$'}: Logaritmik, Invers trigonometri, Aljabar, Trigonometri, Eksponensial.\n" +
                 "   • Substitusi Trigonometri:\n" +
-                "     - Bentuk $\\sqrt{a^2 - x^2} \\implies x = a \\sin\\theta$\n" +
-                "     - Bentuk $\\sqrt{a^2 + x^2} \\implies x = a \\tan\\theta$\n" +
-                "     - Bentuk $\\sqrt{x^2 - a^2} \\implies x = a \\sec\\theta$\n" +
-                "   • Dekomposisi Pecahan Parsial: Mengurai fungsi rasional $\\frac{P(x)}{Q(x)}$ menjadi suku-suku sederhana $\\frac{A}{x - r} + \\frac{Bx + C}{x^2 + k}$.\n" +
-                "   • Integral Tak Wajar (*Improper Integrals*): Batas integrasi tak hingga $\\int_a^\\infty f(x)\\, dx = \\lim_{t \\to \\infty} \\int_a^t f(x)\\, dx$ atau diskontinuitas vertikal tak hingga.\n\n" +
+                "     - Bentuk \${'$'}\\sqrt{a^2 - x^2} \\implies x = a \\sin\\theta\${'$'}\n" +
+                "     - Bentuk \${'$'}\\sqrt{a^2 + x^2} \\implies x = a \\tan\\theta\${'$'}\n" +
+                "     - Bentuk \${'$'}\\sqrt{x^2 - a^2} \\implies x = a \\sec\\theta\${'$'}\n" +
+                "   • Dekomposisi Pecahan Parsial: Mengurai fungsi rasional \${'$'}\\frac{P(x)}{Q(x)}\${'$'} menjadi suku-suku sederhana \${'$'}\\frac{A}{x - r} + \\frac{Bx + C}{x^2 + k}\${'$'}.\n" +
+                "   • Integral Tak Wajar (*Improper Integrals*): Batas integrasi tak hingga \${'$'}\\int_a^\\infty f(x)\\, dx = \\lim_{t \\to \\infty} \\int_a^t f(x)\\, dx\${'$'} atau diskontinuitas vertikal tak hingga.\n\n" +
                 "3. Aplikasi Fisik & Geometri Benda Putar:\n" +
-                "   • Volume Metode Cakram/Cincin (Putar sumbu-x): $V = \\pi \\int_a^b [R(x)^2 - r(x)^2]\\, dx$.\n" +
-                "   • Volume Metode Kulit Tabung Silinder (Putar sumbu-y): $V = 2\\pi \\int_a^b x f(x)\\, dx$.\n" +
-                "   • Panjang Busur Kurva: $L = \\int_a^b \\sqrt{1 + [f'(x)]^2}\\, dx$.",
+                "   • Volume Metode Cakram/Cincin (Putar sumbu-x): \${'$'}V = \\pi \\int_a^b [R(x)^2 - r(x)^2]\\, dx\${'$'}.\n" +
+                "   • Volume Metode Kulit Tabung Silinder (Putar sumbu-y): \${'$'}V = 2\\pi \\int_a^b x f(x)\\, dx\${'$'}.\n" +
+                "   • Panjang Busur Kurva: \${'$'}L = \\int_a^b \\sqrt{1 + [f'(x)]^2}\\, dx\${'$'}.",
         intuitionPoints = listOf(
             "Integral tak wajar integral dari 1 ke tak hingga (1/x) dx divergen tak hingga, tetapi integral dari 1 ke tak hingga (1/x²) dx konvergen tepat bernilai 1!",
             "Trompet Gabriel (Gabriel's Horn) adalah benda putar dari y = 1/x untuk x >= 1 yang memiliki volume berhingga (pi satuan volume) tetapi luas permukaan tak terhingga!",
@@ -595,24 +595,24 @@ object MathLevel4Curriculum {
         intuitionTitle = "Aproksimasi Polinomial: Menjinakkan Fungsi Rumit dengan Deret Taylor",
         intuitionBody = "Deret Taylor adalah salah satu pencapaian intelektual terbesar dalam matematika, memungkinkan kita merepresentasikan fungsi transenden rumit (seperti eksponensial, logaritma, dan trigonometri) sebagai suku-suku polinomial tak hingga yang mudah dihitung.\n\n" +
                 "1. Barisan & Uji Konvergensi Deret Tak Hingga:\n" +
-                "   Deret $\\sum_{n=1}^\\infty a_n$ konvergen ke jumlah $S$ jika barisan jumlah parsial $S_k = \\sum_{n=1}^k a_n$ memiliki limit berhingga saat $k \\to \\infty$.\n" +
-                "   • Uji Divergensi: Jika $\\lim_{n \\to \\infty} a_n \\neq 0$, deret pasti divergen.\n" +
+                "   Deret \${'$'}\\sum_{n=1}^\\infty a_n\${'$'} konvergen ke jumlah \${'$'}S\${'$'} jika barisan jumlah parsial \${'$'}S_k = \\sum_{n=1}^k a_n\${'$'} memiliki limit berhingga saat \${'$'}k \\to \\infty\${'$'}.\n" +
+                "   • Uji Divergensi: Jika \${'$'}\\lim_{n \\to \\infty} a_n \\neq 0\${'$'}, deret pasti divergen.\n" +
                 "   • Uji Rasio d'Alembert (Sangat berguna untuk faktorial dan eksponen):\n" +
-                "     $$L = \\lim_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right|$$\n" +
-                "     - Jika $L < 1$: Konvergen mutlak.\n" +
-                "     - Jika $L > 1$: Divergen.\n" +
-                "     - Jika $L = 1$: Uji tidak dapat disimpulkan (butuh uji lain).\n" +
-                "   • Uji Deret Berganti Tanda (Leibniz): Deret $\\sum (-1)^{n-1} b_n$ konvergen jika $b_{n+1} \\le b_n$ dan $\\lim b_n = 0$.\n\n" +
+                "     \${'$'}\${'$'}L = \\lim_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right|\${'$'}\${'$'}\n" +
+                "     - Jika \${'$'}L < 1\${'$'}: Konvergen mutlak.\n" +
+                "     - Jika \${'$'}L > 1\${'$'}: Divergen.\n" +
+                "     - Jika \${'$'}L = 1\${'$'}: Uji tidak dapat disimpulkan (butuh uji lain).\n" +
+                "   • Uji Deret Berganti Tanda (Leibniz): Deret \${'$'}\\sum (-1)^{n-1} b_n\${'$'} konvergen jika \${'$'}b_{n+1} \\le b_n\${'$'} dan \${'$'}\\lim b_n = 0\${'$'}.\n\n" +
                 "2. Deret Kuasa & Jari-Jari Konvergensi:\n" +
-                "   Deret berbentuk $\\sum_{n=0}^\\infty c_n (x - a)^n$ konvergen pada interval $|x - a| < R$, di mana $R$ adalah Jari-jari Konvergensi ($R = 1/L$).\n\n" +
+                "   Deret berbentuk \${'$'}\\sum_{n=0}^\\infty c_n (x - a)^n\${'$'} konvergen pada interval \${'$'}|x - a| < R\${'$'}, di mana \${'$'}R\${'$'} adalah Jari-jari Konvergensi (\${'$'}R = 1/L\${'$'}).\n\n" +
                 "3. Rumus Deret Taylor & Maclaurin:\n" +
-                "   Jika fungsi $f$ memiliki turunan di semua tingkat di sekitar titik pusat $a$, maka:\n" +
-                "   $$f(x) = \\sum_{n=0}^\\infty \\frac{f^{(n)}(a)}{n!} (x - a)^n = f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^2 + \\frac{f'''(a)}{3!}(x-a)^3 + \\dots$$\n" +
-                "   *Deret Maclaurin* adalah deret Taylor dengan pusat titik nol ($a = 0$):\n" +
-                "   • $e^x = 1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\dots = \\sum_{n=0}^\\infty \\frac{x^n}{n!} \\quad (R = \\infty)$\n" +
-                "   • $\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + \\dots = \\sum_{n=0}^\\infty (-1)^n \\frac{x^{2n+1}}{(2n+1)!} \\quad (R = \\infty)$\n" +
-                "   • $\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\frac{x^6}{6!} + \\dots = \\sum_{n=0}^\\infty (-1)^n \\frac{x^{2n}}{(2n)!} \\quad (R = \\infty)$\n" +
-                "   • $\\frac{1}{1 - x} = 1 + x + x^2 + x^3 + \\dots \\quad (|x| < 1)$",
+                "   Jika fungsi \${'$'}f\${'$'} memiliki turunan di semua tingkat di sekitar titik pusat \${'$'}a\${'$'}, maka:\n" +
+                "   \${'$'}\${'$'}f(x) = \\sum_{n=0}^\\infty \\frac{f^{(n)}(a)}{n!} (x - a)^n = f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^2 + \\frac{f'''(a)}{3!}(x-a)^3 + \\dots\${'$'}\${'$'}\n" +
+                "   *Deret Maclaurin* adalah deret Taylor dengan pusat titik nol (\${'$'}a = 0\${'$'}):\n" +
+                "   • \${'$'}e^x = 1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\dots = \\sum_{n=0}^\\infty \\frac{x^n}{n!} \\quad (R = \\infty)\${'$'}\n" +
+                "   • \${'$'}\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + \\dots = \\sum_{n=0}^\\infty (-1)^n \\frac{x^{2n+1}}{(2n+1)!} \\quad (R = \\infty)\${'$'}\n" +
+                "   • \${'$'}\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\frac{x^6}{6!} + \\dots = \\sum_{n=0}^\\infty (-1)^n \\frac{x^{2n}}{(2n)!} \\quad (R = \\infty)\${'$'}\n" +
+                "   • \${'$'}\\frac{1}{1 - x} = 1 + x + x^2 + x^3 + \\dots \\quad (|x| < 1)\${'$'}",
         intuitionPoints = listOf(
             "Teorema Sisa Taylor Lagrange (Taylor's Remainder Theorem) memberikan batas galat mutlak |R_n(x)| saat polinomial dipotong pada derajat n, esensial untuk perhitungan komputasi berakurasi tinggi.",
             "Deret Taylor adalah dasar metode numerik Runge-Kutta (RK4) untuk menyelesaikan persamaan diferensial gerak satelit antariksa dan simulasi cuaca BMKG.",
@@ -745,28 +745,28 @@ object MathLevel4Curriculum {
             )
         ),
         intuitionTitle = "Dunia Nyata Berdimensi Banyak: Kalkulus Diferensial & Integral Multivariabel",
-        intuitionBody = "Di dunia nyata, hampir tidak ada fenomena yang hanya bergantung pada satu variabel tunggal; suhu ruangan bergantung pada koordinat ruang $(x, y, z)$ dan waktu $t$, keuntungan ekonomi bergantung pada harga dan biaya produksi.\n\n" +
+        intuitionBody = "Di dunia nyata, hampir tidak ada fenomena yang hanya bergantung pada satu variabel tunggal; suhu ruangan bergantung pada koordinat ruang $(x, y, z)$ dan waktu \${'$'}t\${'$'}, keuntungan ekonomi bergantung pada harga dan biaya produksi.\n\n" +
                 "1. Turunan Parsial & Bidang Singgung:\n" +
-                "   Untuk fungsi $z = f(x, y)$, turunan parsial $\\frac{\\partial f}{\\partial x}$ mengukur laju perubahan $z$ terhadap $x$ dengan MENGANGGAP $y$ SEBAGAI KONSTANTA tetap.\n" +
+                "   Untuk fungsi \${'$'}z = f(x, y)$, turunan parsial $\\frac{\\partial f}{\\partial x}$ mengukur laju perubahan \${'$'}z$ terhadap \${'$'}x$ dengan MENGANGGAP \${'$'}y$ SEBAGAI KONSTANTA tetap.\n" +
                 "   • Persamaan Bidang Singgung di titik $(x_0, y_0, z_0)$:\n" +
-                "     $$z - z_0 = f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)$$\n\n" +
+                "     \${'$'}\${'$'}z - z_0 = f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)\${'$'}\${'$'}\n\n" +
                 "2. Vektor Gradien & Turunan Berarah:\n" +
                 "   Vektor gradien adalah vektor turunan parsial:\n" +
                 "   $$\\nabla f(x, y) = \\left( \\frac{\\partial f}{\\partial x}, \\; \\frac{\\partial f}{\\partial y} \\right)$$\n" +
                 "   • Properti Utama Gradien:\n" +
                 "     1. Gradien menunjuk ke arah laju peningkatan nilai fungsi TERCEPAT (tanjakan tercuram).\n" +
                 "     2. Besar magnitudo $\\|\\nabla f\\|$ adalah laju peningkatan maksimum tersebut.\n" +
-                "     3. Vektor gradien selalu ortogonal (tegak lurus) terhadap kurva ketinggian (*level curve* / garis kontur $f(x, y) = k$).\n\n" +
+                "     3. Vektor gradien selalu ortogonal (tegak lurus) terhadap kurva ketinggian (*level curve* / garis kontur \${'$'}f(x, y) = k$).\n\n" +
                 "3. Optimasi Berkendala: Metode Pengali Lagrange (*Lagrange Multipliers*):\n" +
-                "   Untuk mencari nilai maksimum atau minimum dari fungsi $f(x, y)$ dengan kendala kurva $g(x, y) = k$, selesaikan sistem persamaan:\n" +
+                "   Untuk mencari nilai maksimum atau minimum dari fungsi \${'$'}f(x, y)$ dengan kendala kurva \${'$'}g(x, y) = k$, selesaikan sistem persamaan:\n" +
                 "   $$\\nabla f = \\lambda \\nabla g \\quad \\text{dan} \\quad g(x, y) = k$$\n" +
                 "   di mana $\\lambda$ adalah skalar pengali Lagrange.\n\n" +
                 "4. Integral Lipat Dua & Tiga:\n" +
                 "   • Integral Lipat Dua (Luas & Volume di bawah permukaan): $\\iint_R f(x, y)\\, dA$.\n" +
-                "     - Dalam koordinat polar: $dA = r\\, dr\\, d\\theta$.\n" +
+                "     - Dalam koordinat polar: \${'$'}dA = r\\, dr\\, d\\theta$.\n" +
                 "   • Integral Lipat Tiga (Massa & Pusat Massa): $\\iiint_E f(x, y, z)\\, dV$.\n" +
-                "     - Dalam koordinat silinder: $dV = r\\, dr\\, d\\theta\\, dz$.\n" +
-                "     - Dalam koordinat bola: $dV = \\rho^2 \\sin\\phi\\, d\\rho\\, d\\phi\\, d\\theta$.",
+                "     - Dalam koordinat silinder: \${'$'}dV = r\\, dr\\, d\\theta\\, dz$.\n" +
+                "     - Dalam koordinat bola: \${'$'}dV = \\rho^2 \\sin\\phi\\, d\\rho\\, d\\phi\\, d\\theta$.",
         intuitionPoints = listOf(
             "Mengapa faktor diferensial polar memuat pengali r (dA = r dr dθ)? Karena semakin jauh dari pusat (r besar), panjang busur lingkaran semakin melebar sebanding r!",
             "Metode Gradient Descent dalam kecerdasan buatan (Machine Learning) bekerja melangkah menuruni gradien negatif (-∇f) dari fungsi kerugian (Loss Function) untuk melatih model AI.",
@@ -923,13 +923,13 @@ object MathLevel4Curriculum {
                 "     - $\\nabla \\times \\mathbf{F} = \\mathbf{0}$: Medan Irotasional (Konservatif $\\mathbf{F} = \\nabla \\phi$).\n\n" +
                 "2. Tiga Teorema Integral Fundamental Kalkulus Vektor:\n" +
                 "   • Teorema Green (Bidang 2 Dimensi):\n" +
-                "     Menghubungkan integral garis tertutup $\\oint_C$ dengan integral lipat dua area $D$:\n" +
+                "     Menghubungkan integral garis tertutup $\\oint_C$ dengan integral lipat dua area \${'$'}D$:\n" +
                 "     $$\\oint_C (P\\, dx + Q\\, dy) = \\iint_D \\left( \\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y} \\right) dA$$\n" +
                 "   • Teorema Stokes (Permukaan 3 Dimensi Terbuka):\n" +
-                "     Sirkulasi medan di sepanjang kurva batas tertutup $C = \\partial S$ sama dengan fluks curl menembus permukaan $S$:\n" +
+                "     Sirkulasi medan di sepanjang kurva batas tertutup \${'$'}C = \\partial S$ sama dengan fluks curl menembus permukaan \${'$'}S$:\n" +
                 "     $$\\oint_C \\mathbf{F} \\cdot d\\mathbf{r} = \\iint_S (\\nabla \\times \\mathbf{F}) \\cdot d\\mathbf{S}$$\n" +
                 "   • Teorema Divergensi Gauss (Permukaan 3 Dimensi Tertutup Melingkupi Volume):\n" +
-                "     Fluks total yang keluar menembus kulit tertutup $S = \\partial V$ sama dengan integral volume divergensi di dalam $V$:\n" +
+                "     Fluks total yang keluar menembus kulit tertutup \${'$'}S = \\partial V$ sama dengan integral volume divergensi di dalam \${'$'}V$:\n" +
                 "     $$\\oiint_S \\mathbf{F} \\cdot d\\mathbf{S} = \\iiint_V (\\nabla \\cdot \\mathbf{F})\\, dV$$",
         intuitionPoints = listOf(
             "Teorema Dasar Kalkulus, Teorema Green, Teorema Stokes, dan Teorema Gauss semuanya adalah kasus khusus dari satu teorema universal tunggal: Teorema Stokes Umum untuk Bentuk Diferensial (∫_∂Ω ω = ∫_Ω dω)!",

@@ -394,7 +394,7 @@ object BiologyLevel4Curriculum {
         formulaCards = listOf(
             FormulaCard(
                 title = "Termodinamika Hidrolisis ATP",
-                latexFormula = "\\text{ATP} + \\text{H}_2\\text{O} \\rightleftharpoons \\text{ADP} + \\text{P}_i \\quad (\\Delta G'^\circ = -30.5 \\text{ kJ/mol})",
+                latexFormula = "\\text{ATP} + \\text{H}_2\\text{O} \\rightleftharpoons \\text{ADP} + \\text{P}_i \\quad (\\Delta G'^\\circ = -30.5 \\text{ kJ/mol})",
                 description = "Pelepasan energi bebas akibat pemutusan ikatan fosfoanhidrida berenergi tinggi.",
                 variableMeanings = mapOf(
                     "\\Delta G'^\\circ" to "Perubahan energi bebas Gibbs standar biologis (pH 7, 25°C)",

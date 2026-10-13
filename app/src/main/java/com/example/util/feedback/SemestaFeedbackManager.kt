@@ -74,6 +74,10 @@ class SemestaFeedbackManager(context: Context) {
         haptics.fanfarePulse()
     }
 
+    fun playFanfare() {
+        playBadgeFanfare()
+    }
+
     fun release() {
         audioEngine.release()
     }

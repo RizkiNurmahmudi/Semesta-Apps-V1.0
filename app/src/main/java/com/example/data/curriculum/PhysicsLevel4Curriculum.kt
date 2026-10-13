@@ -180,7 +180,7 @@ object PhysicsLevel4Curriculum {
             )
         ),
         intuitionTitle = "Mekanika Analitis Vektor: Menyelesaikan Gerak Dinamis Riil di Bawah Gesekan Fluida",
-        intuitionBody = "Mekanika klasik di perguruan tinggi melangkah dari rumus kinematika konstan menuju formulasi kalkulus diferensial vektor umum di mana gaya bergantung pada posisi $\\mathbf{r}$, kecepatan $\\mathbf{v}$, dan waktu $t$.\n\n" +
+        intuitionBody = "Mekanika klasik di perguruan tinggi melangkah dari rumus kinematika konstan menuju formulasi kalkulus diferensial vektor umum di mana gaya bergantung pada posisi $\\mathbf{r}$, kecepatan $\\mathbf{v}$, dan waktu \${'$'}t$.\n\n" +
                 "1. Persamaan Diferensial Gerak Partikel:\n" +
                 "   Hukum II Newton dalam bentuk persamaan diferensial vektor orde dua:\n" +
                 "   $$\\mathbf{F}(t, \\mathbf{r}, \\mathbf{v}) = m \\frac{d^2 \\mathbf{r}}{dt^2} = m \\ddot{\\mathbf{r}}$$\n" +
@@ -190,13 +190,13 @@ object PhysicsLevel4Curriculum {
                 "     Suku $2\\dot{r}\\dot{\\theta}$ adalah percepatan Coriolis kinematik.\n\n" +
                 "2. Model Gaya Hambat Fluida (Drag Force):\n" +
                 "   A. Hambatan Linear (Bilangan Reynolds Rendah / Rezim Viskos Stokes):\n" +
-                "      $$F_{\\text{drag}} = -b v \\implies m \\frac{dv}{dt} = mg - bv$$\n" +
+                "      $$\${'$'}F_{\\text{drag}} = -b v \\implies m \\frac{dv}{dt} = mg - bv$$\n" +
                 "      Solusi kecepatan sebagai fungsi waktu:\n" +
-                "      $$v(t) = v_t \\left( 1 - e^{-t/\\tau} \\right) \\quad \\text{dengan } v_t = \\frac{mg}{b} \\; \\text{dan } \\tau = \\frac{m}{b}$$\n" +
+                "      $$\${'$'}v(t) = \${'$'}v_t \\left( 1 - e^{-t/\\tau} \\right) \\quad \\text{dengan } \${'$'}v_t = \\frac{mg}{b} \\; \\text{dan } \\tau = \\frac{m}{b}$$\n" +
                 "   B. Hambatan Kuadratik (Bilangan Reynolds Tinggi / Rezim Aerodinamika Turbulen):\n" +
-                "      $$F_{\\text{drag}} = -\\frac{1}{2} C_d \\rho A v^2$$\n" +
-                "      Kecepatan Terminal ($a = 0 \\implies F_{\\text{drag}} = mg$):\n" +
-                "      $$v_t = \\sqrt{\\frac{2mg}{C_d \\rho A}}$$",
+                "      $$\${'$'}F_{\\text{drag}} = -\\frac{1}{2} C_d \\rho A v^2$$\n" +
+                "      Kecepatan Terminal (\${'$'}a = 0 \\implies \${'$'}F_{\\text{drag}} = mg$):\n" +
+                "      $$\${'$'}v_t = \\sqrt{\\frac{2mg}{C_d \\rho A}}$$",
         intuitionPoints = listOf(
             "Mengapa tetesan air hujan dari awan setinggi 2.000 meter tidak melubangi kepala kita seperti peluru timah? Karena tetes air hujan dihambat udara hingga mencapai kecepatan terminal yang aman (~9 m/s atau 32 km/jam)!",
             "Konstanta waktu tau = m/b menunjukkan bahwa benda yang lebih berat (m besar) membutuhkan waktu lebih lama untuk mencapai kecepatan terminalnya.",
@@ -334,23 +334,23 @@ object PhysicsLevel4Curriculum {
             )
         ),
         intuitionTitle = "Lanskap Energi Alam: Analisis Kualitatif Stabilitas Sistem Fisis",
-        intuitionBody = "Pemetaan kurva energi potensial $U(x)$ adalah salah satu teknik analitis paling elegan dalam fisika untuk memahami dinamika gerak sistem tanpa harus menyelesaikan persamaan diferensial gerak secara eksplisit.\n\n" +
+        intuitionBody = "Pemetaan kurva energi potensial \${'$'}U(x)\${'$'} adalah salah satu teknik analitis paling elegan dalam fisika untuk memahami dinamika gerak sistem tanpa harus menyelesaikan persamaan diferensial gerak secara eksplisit.\n\n" +
                 "1. Definisi Formal Gaya Konservatif:\n" +
-                "   Gaya $\\mathbf{F}$ bersifat konservatif jika kerja yang dilakukannya sepanjang lintasan tertutup bernilai nol ($\\oint \\mathbf{F} \\cdot d\\mathbf{r} = 0$), yang setara dengan syarat irrotasional:\n" +
-                "   $$\\nabla \\times \\mathbf{F} = \\mathbf{0} \\iff \\mathbf{F} = -\\nabla U$$\n" +
-                "   • Untuk 1 Dimensi: $F(x) = -\\frac{dU}{dx}$.\n" +
+                "   Gaya \${'$'}\\mathbf{F}\${'$'} bersifat konservatif jika kerja yang dilakukannya sepanjang lintasan tertutup bernilai nol (\${'$'}\\oint \\mathbf{F} \\cdot d\\mathbf{r} = 0\${'$'}), yang setara dengan syarat irrotasional:\n" +
+                "   \${'$'}\${'$'}\\nabla \\times \\mathbf{F} = \\mathbf{0} \\iff \\mathbf{F} = -\\nabla U\${'$'}\${'$'}\n" +
+                "   • Untuk 1 Dimensi: \${'$'}F(x) = -\\frac{dU}{dx}\${'$'}.\n" +
                 "   • Partikel selalu mengalami gaya dorong menuju ke arah energi potensial yang lebih rendah.\n\n" +
-                "2. Klasifikasi Titik Ekuilibrium ($F(x_0) = -U'(x_0) = 0$):\n" +
-                "   • Ekuilibrium Stabil: $\\frac{d^2 U}{dx^2}(x_0) > 0$ (Titik Minimum Lokal Lembah). Partikel yang digeser sedikit akan mengalami gaya pemulih (*restoring force*) yang mengembalikannya ke $x_0$.\n" +
-                "   • Ekuilibrium Tidak Stabil / Labil: $\\frac{d^2 U}{dx^2}(x_0) < 0$ (Titik Maksimum Lokal Bukit). Gangguan sekecil apa pun akan mendorong partikel menjauh tak kembali.\n" +
-                "   • Ekuilibrium Netral: $\\frac{d^2 U}{dx^2}(x_0) = 0$ (Dataran Datar). Partikel tetap diam di posisi baru.\n\n" +
+                "2. Klasifikasi Titik Ekuilibrium (\${'$'}F(x_0) = -U'(x_0) = 0\${'$'}):\n" +
+                "   • Ekuilibrium Stabil: \${'$'}\\frac{d^2 U}{dx^2}(x_0) > 0\${'$'} (Titik Minimum Lokal Lembah). Partikel yang digeser sedikit akan mengalami gaya pemulih (*restoring force*) yang mengembalikannya ke \${'$'}x_0\${'$'}.\n" +
+                "   • Ekuilibrium Tidak Stabil / Labil: \${'$'}\\frac{d^2 U}{dx^2}(x_0) < 0\${'$'} (Titik Maksimum Lokal Bukit). Gangguan sekecil apa pun akan mendorong partikel menjauh tak kembali.\n" +
+                "   • Ekuilibrium Netral: \${'$'}\\frac{d^2 U}{dx^2}(x_0) = 0\${'$'} (Dataran Datar). Partikel tetap diam di posisi baru.\n\n" +
                 "3. Aproksimasi Osilasi Harmonik di Sekitar Minimum:\n" +
-                "   Dengan mengekspansi $U(x)$ menggunakan Deret Taylor di sekitar titik minimum stabil $x_0$:\n" +
-                "   $$U(x) = U(x_0) + U'(x_0)(x - x_0) + \\frac{1}{2} U''(x_0)(x - x_0)^2 + \\dots$$\n" +
-                "   Karena $U'(x_0) = 0$, untuk simpangan kecil $(x - x_0)$:\n" +
-                "   $$U(x) \\approx \\frac{1}{2} k_{\\text{eff}} (x - x_0)^2 \\quad \\text{di mana } k_{\\text{eff}} = U''(x_0)$$\n" +
+                "   Dengan mengekspansi \${'$'}U(x)\${'$'} menggunakan Deret Taylor di sekitar titik minimum stabil \${'$'}x_0\${'$'}:\n" +
+                "   \${'$'}\${'$'}U(x) = U(x_0) + U'(x_0)(x - x_0) + \\frac{1}{2} U''(x_0)(x - x_0)^2 + \\dots\${'$'}\${'$'}\n" +
+                "   Karena \${'$'}U'(x_0) = 0\${'$'}, untuk simpangan kecil \${'$'}(x - x_0)\${'$'}:\n" +
+                "   \${'$'}\${'$'}U(x) \\approx \\frac{1}{2} k_{\\text{eff}} (x - x_0)^2 \\quad \\text{di mana } k_{\\text{eff}} = U''(x_0)\${'$'}\${'$'}\n" +
                 "   Partikel akan berosilasi harmonik sederhana dengan frekuensi sudut alamiah:\n" +
-                "   $$\\omega_0 = \\sqrt{\\frac{k_{\\text{eff}}}{m}} = \\sqrt{\\frac{U''(x_0)}{m}}$$",
+                "   \${'$'}\${'$'}\\omega_0 = \\sqrt{\\frac{k_{\\text{eff}}}{m}} = \\sqrt{\\frac{U''(x_0)}{m}}\${'$'}\${'$'}",
         intuitionPoints = listOf(
             "Hampir SEMUA getaran di alam semesta (getaran ikatan kimia molekul, getaran dawai musik, osilasi atom kristal) adalah osilasi harmonik sederhana karena dasar sumur potensial mulus apa pun selalu menyerupai parabola kuadratik!",
             "Titik balik (*turning points*) adalah posisi di mana kurva energi potensial tepat menyamai energi total sistem (U(x) = E), di mana energi kinetik menjadi nol dan partikel membalikkan arah geraknya.",
@@ -491,19 +491,19 @@ object PhysicsLevel4Curriculum {
         intuitionTitle = "Dinamika Benda Banyak: Pusat Massa Kontinu & Sistem Massa Variabel",
         intuitionBody = "Ketika menganalisis benda pejal riil atau wahana antariksa, kita tidak dapat lagi mengasumsikan objek sebagai partikel titik tunggal bermassa konstan.\n\n" +
                 "1. Pusat Massa Distribusi Kontinu:\n" +
-                "   Untuk benda pejal bervolume dengan densitas massa $\\rho(\\mathbf{r})$:\n" +
-                "   $$\\mathbf{r}_{\\text{cm}} = \\frac{1}{M} \\int \\mathbf{r}\\, dm = \\frac{1}{M} \\iiint_V \\mathbf{r}\\, \\rho(\\mathbf{r})\\, dV$$\n" +
-                "   di mana massa total $M = \\int dm = \\iiint_V \\rho\\, dV$.\n" +
-                "   • Teorema Gerak Pusat Massa: Gerak translasi keseluruhan sistem partikel memenuhi $\\mathbf{F}_{\\text{ext, net}} = M \\mathbf{a}_{\\text{cm}}$, terlepas dari gaya internal antar-partikel di dalam sistem.\n\n" +
+                "   Untuk benda pejal bervolume dengan densitas massa \${'$'}\\rho(\\mathbf{r})\${'$'}:\n" +
+                "   \${'$'}\${'$'}\\mathbf{r}_{\\text{cm}} = \\frac{1}{M} \\int \\mathbf{r}\\, dm = \\frac{1}{M} \\iiint_V \\mathbf{r}\\, \\rho(\\mathbf{r})\\, dV\${'$'}\${'$'}\n" +
+                "   di mana massa total \${'$'}M = \\int dm = \\iiint_V \\rho\\, dV\${'$'}.\n" +
+                "   • Teorema Gerak Pusat Massa: Gerak translasi keseluruhan sistem partikel memenuhi \${'$'}\\mathbf{F}_{\\text{ext, net}} = M \\mathbf{a}_{\\text{cm}}\${'$'}, terlepas dari gaya internal antar-partikel di dalam sistem.\n\n" +
                 "2. Dinamika Sistem Massa Variabel (Persamaan Roket Tsiolkovsky):\n" +
-                "   Pada roket yang menyemburkan gas buang dengan laju alir massa $\\frac{dm}{dt} < 0$ dan kecepatan buang relatif $v_e$:\n" +
-                "   $$m \\frac{dv}{dt} = -v_e \\frac{dm}{dt} \\implies dv = -v_e \\frac{dm}{m}$$\n" +
-                "   Dengan mengintegralkan dari massa awal $m_0$ ke massa akhir $m_f$:\n" +
-                "   $$\\Delta v = v_f - v_0 = v_e \\ln \\left( \\frac{m_0}{m_f} \\right)$$\n" +
-                "   • Gaya Dorong Roket (*Thrust*): $T = v_e \\left| \\frac{dm}{dt} \\right|$.\n\n" +
+                "   Pada roket yang menyemburkan gas buang dengan laju alir massa \${'$'}\\frac{dm}{dt} < 0\${'$'} dan kecepatan buang relatif \${'$'}v_e\${'$'}:\n" +
+                "   \${'$'}\${'$'}m \\frac{dv}{dt} = -v_e \\frac{dm}{dt} \\implies dv = -v_e \\frac{dm}{m}\${'$'}\${'$'}\n" +
+                "   Dengan mengintegralkan dari massa awal \${'$'}m_0\${'$'} ke massa akhir \${'$'}m_f\${'$'}:\n" +
+                "   \${'$'}\${'$'}\\Delta v = v_f - v_0 = v_e \\ln \\left( \\frac{m_0}{m_f} \\right)\${'$'}\${'$'}\n" +
+                "   • Gaya Dorong Roket (*Thrust*): \${'$'}T = v_e \\left| \\frac{dm}{dt} \\right|\${'$'}.\n\n" +
                 "3. Momentum Sudut Sistem Partikel:\n" +
-                "   $$\\mathbf{L}_{\\text{total}} = \\sum_{i} \\mathbf{r}_i \\times \\mathbf{p}_i = \\mathbf{r}_{\\text{cm}} \\times \\mathbf{P}_{\\text{total}} + \\mathbf{L}_{\\text{spin}}$$\n" +
-                "   • Laju perubahan momentum sudut total sama persis dengan total torsi eksternal netto: $\\frac{d\\mathbf{L}}{dt} = \\boldsymbol{\\tau}_{\\text{ext}}$. Jika $\\boldsymbol{\\tau}_{\\text{ext}} = \\mathbf{0}$, maka $\\mathbf{L}$ kekal konstan.",
+                "   \${'$'}\${'$'}\\mathbf{L}_{\\text{total}} = \\sum_{i} \\mathbf{r}_i \\times \\mathbf{p}_i = \\mathbf{r}_{\\text{cm}} \\times \\mathbf{P}_{\\text{total}} + \\mathbf{L}_{\\text{spin}}\${'$'}\${'$'}\n" +
+                "   • Laju perubahan momentum sudut total sama persis dengan total torsi eksternal netto: \${'$'}\\frac{d\\mathbf{L}}{dt} = \\boldsymbol{\\tau}_{\\text{ext}}\${'$'}. Jika \${'$'}\\boldsymbol{\\tau}_{\\text{ext}} = \\mathbf{0}\${'$'}, maka \${'$'}\\mathbf{L}\${'$'} kekal konstan.",
         intuitionPoints = listOf(
             "Mengapa roket bertingkat (multi-stage rocket) mutlak diperlukan untuk ke antariksa? Karena roket satu tingkat memerlukan rasio bahan bakar m0/mf yang sangat besar secara eksponensial; membuang tangki kosong bekas mengurangi massa akhir mf secara drastis!",
             "Ledakan kembang api di langit malam: serpihan kembang api terpental ke segala arah tak beraturan, tetapi Pusat Massa dari seluruh serpihan tetap meluncur mulus mengikuti lintasan parabola gravitasi sempurna!",
@@ -641,28 +641,28 @@ object PhysicsLevel4Curriculum {
         intuitionTitle = "Dinamika Getaran Riil: Persamaan Diferensial Osilasi Teredam & Resonansi",
         intuitionBody = "Di alam nyata, tidak ada osilator harmonik abadi tanpa gesekan; energi mekanik selalu terdisipasi secara bertahap oleh hambatan viskos fluida menjadi energi termal panas.\n\n" +
                 "1. Persamaan Diferensial Osilator Harmonik Teredam:\n" +
-                "   Berdasarkan Hukum II Newton dengan gaya pemulih pegas $-kx$ dan gaya redaman viskos $-b\\dot{x}$:\n" +
-                "   $$m \\ddot{x} + b \\dot{x} + kx = 0 \\iff \\ddot{x} + 2\\gamma \\dot{x} + \\omega_0^2 x = 0$$\n" +
-                "   di mana $\\omega_0 = \\sqrt{\\frac{k}{m}}$ adalah frekuensi sudut alami tak teredam dan $\\gamma = \\frac{b}{2m}$ adalah parameter redaman.\n\n" +
+                "   Berdasarkan Hukum II Newton dengan gaya pemulih pegas \${'$'}-kx\${'$'} dan gaya redaman viskos \${'$'}-b\\dot{x}\${'$'}:\n" +
+                "   \${'$'}\${'$'}m \\ddot{x} + b \\dot{x} + kx = 0 \\iff \\ddot{x} + 2\\gamma \\dot{x} + \\omega_0^2 x = 0\${'$'}\${'$'}\n" +
+                "   di mana \${'$'}\\omega_0 = \\sqrt{\\frac{k}{m}}\${'$'} adalah frekuensi sudut alami tak teredam dan \${'$'}\\gamma = \\frac{b}{2m}\${'$'} adalah parameter redaman.\n\n" +
                 "2. Tiga Rezim Karakteristik Solusi Gerak:\n" +
-                "   Persamaan karakteristik $r^2 + 2\\gamma r + \\omega_0^2 = 0 \\implies r = -\\gamma \\pm \\sqrt{\\gamma^2 - \\omega_0^2}$:\n" +
-                "   • Redaman Kurang (*Underdamped*, $\\gamma < \\omega_0$):\n" +
+                "   Persamaan karakteristik \${'$'}r^2 + 2\\gamma r + \\omega_0^2 = 0 \\implies r = -\\gamma \\pm \\sqrt{\\gamma^2 - \\omega_0^2}\${'$'}:\n" +
+                "   • Redaman Kurang (*Underdamped*, \${'$'}\\gamma < \\omega_0\${'$'}):\n" +
                 "     Akar kompleks, partikel berosilasi dengan amplitudo menyusut eksponensial:\n" +
-                "     $$x(t) = A e^{-\\gamma t} \\cos(\\omega_d t + \\phi) \\quad \\text{dengan } \\omega_d = \\sqrt{\\omega_0^2 - \\gamma^2}$$\n" +
-                "   • Redaman Kritis (*Critically Damped*, $\\gamma = \\omega_0$):\n" +
-                "     Partikel kembali ke titik kesetimbangan dalam waktu tercepat tanpa pernah berosilasi berbalik arah ($x(t) = (A + Bt)e^{-\\gamma t}$). Sangat ideal untuk peredam kejut shockbreaker mobil dan pintu otomatis!\n" +
-                "   • Redaman Lebih (*Overdamped*, $\\gamma > \\omega_0$):\n" +
+                "     \${'$'}\${'$'}x(t) = A e^{-\\gamma t} \\cos(\\omega_d t + \\phi) \\quad \\text{dengan } \\omega_d = \\sqrt{\\omega_0^2 - \\gamma^2}\${'$'}\${'$'}\n" +
+                "   • Redaman Kritis (*Critically Damped*, \${'$'}\\gamma = \\omega_0\${'$'}):\n" +
+                "     Partikel kembali ke titik kesetimbangan dalam waktu tercepat tanpa pernah berosilasi berbalik arah (\${'$'}x(t) = (A + Bt)e^{-\\gamma t}\${'$'}). Sangat ideal untuk peredam kejut shockbreaker mobil dan pintu otomatis!\n" +
+                "   • Redaman Lebih (*Overdamped*, \${'$'}\\gamma > \\omega_0\${'$'}):\n" +
                 "     Redaman sangat kental pekat sehingga sistem kembali ke titik nol secara lambat merangkak tanpa osilasi.\n\n" +
                 "3. Osilasi Paksa Sinusoidal & Fenomena Resonansi:\n" +
-                "   Jika diberi gaya dorong periodik luar $F(t) = F_0 \\cos(\\omega t)$:\n" +
-                "   $$\\ddot{x} + 2\\gamma \\dot{x} + \\omega_0^2 x = \\frac{F_0}{m} \\cos(\\omega t)$$\n" +
+                "   Jika diberi gaya dorong periodik luar \${'$'}F(t) = F_0 \\cos(\\omega t)\${'$'}:\n" +
+                "   \${'$'}\${'$'}\\ddot{x} + 2\\gamma \\dot{x} + \\omega_0^2 x = \\frac{F_0}{m} \\cos(\\omega t)\${'$'}\${'$'}\n" +
                 "   Amplitudo keadaan tunak (*steady-state*):\n" +
-                "   $$A(\\omega) = \\frac{F_0 / m}{\\sqrt{(\\omega_0^2 - \\omega^2)^2 + 4\\gamma^2 \\omega^2}}$$\n" +
-                "   • Resonansi terjadi saat frekuensi dorong luar mendekati $\\omega = \\sqrt{\\omega_0^2 - 2\\gamma^2} \\approx \\omega_0$, di mana amplitudo melonjak mencapai nilai puncak maksimum.\n\n" +
-                "4. Faktor Kualitas (*Quality Factor* / $Q$):\n" +
+                "   \${'$'}\${'$'}A(\\omega) = \\frac{F_0 / m}{\\sqrt{(\\omega_0^2 - \\omega^2)^2 + 4\\gamma^2 \\omega^2}}\${'$'}\${'$'}\n" +
+                "   • Resonansi terjadi saat frekuensi dorong luar mendekati \${'$'}\\omega = \\sqrt{\\omega_0^2 - 2\\gamma^2} \\approx \\omega_0\${'$'}, di mana amplitudo melonjak mencapai nilai puncak maksimum.\n\n" +
+                "4. Faktor Kualitas (*Quality Factor* / \${'$'}Q\${'$'}):\n" +
                 "   Mengukur rasio energi tersimpan terhadap energi yang terdisipasi per radian siklus:\n" +
-                "   $$Q = \\frac{\\omega_0}{2\\gamma} = \\frac{\\omega_0}{\\Delta \\omega}$$\n" +
-                "   di mana $\\Delta \\omega$ adalah lebar pita setengah daya (*bandwidth FWHM*).",
+                "   \${'$'}\${'$'}Q = \\frac{\\omega_0}{2\\gamma} = \\frac{\\omega_0}{\\Delta \\omega}\${'$'}\${'$'}\n" +
+                "   di mana \${'$'}\\Delta \\omega\${'$'} adalah lebar pita setengah daya (*bandwidth FWHM*).",
         intuitionPoints = listOf(
             "Shockbreaker suspensi mobil dirancang sengaja pada kondisi Redaman Kritis (gamma = omega0); jika underdamped mobil akan terus memantul-mantul sehabis melewati polisi tidur, jika overdamped suspensi terasa keras kaku membanting penumpang!",
             "Pencitraan Medis MRI (Magnetic Resonance Imaging) di rumah sakit memanfaatkan resonansi magnetik inti atom hidrogen di dalam tubuh pasien untuk menghasilkan citra detail organ tanpa radiasi sinar-X.",
@@ -719,12 +719,12 @@ object PhysicsLevel4Curriculum {
                 id = "q-osilasi-ter-1",
                 prompt = "Kondisi redaman di mana sebuah sistem mekanik yang diberi simpangan awal dapat kembali ke posisi kesetimbangan nol dalam waktu PALING CEPAT tanpa mengalami osilasi bolak-balik dinamakan...",
                 type = "multiple_choice",
-                options = [
+                options = listOf(
                     "Redaman Kritis (Critically Damped)",
                     "Redaman Kurang (Underdamped)",
                     "Redaman Lebih (Overdamped)",
                     "Osilasi Tak Teredam Bebas"
-                ],
+                ),
                 correctAnswer = "Redaman Kritis (Critically Damped)",
                 hints = listOf(
                     "Terjadi ketika parameter redaman gamma sama persis dengan frekuensi alami omega_0.",
@@ -801,24 +801,24 @@ object PhysicsLevel4Curriculum {
         intuitionTitle = "Mekanika Kontinum Gelombang: Persamaan Diferensial Parsial & Transmisi Impedansi",
         intuitionBody = "Gelombang mekanik adalah perambatan gangguan energi kinetik dan potensial yang terdistribusi secara kontinu melintasi medium elastis tanpa disertai perpindahan massa materi secara permanen.\n\n" +
                 "1. Penurunan Persamaan Diferensial Parsial Gelombang 1 Dimensi:\n" +
-                "   Tinjau elemen tali bermassa $dm = \\mu\\, dx$ di bawah tegangan $T$. Komponen gaya vertikal netto pada sudut kemiringan kecil $\\theta$:\n" +
-                "   $$F_y = T \\sin(\\theta + d\\theta) - T \\sin\\theta \\approx T \\left( \\frac{\\partial y}{\\partial x}_{x+dx} - \\frac{\\partial y}{\\partial x}_x \\right) = T \\frac{\\partial^2 y}{\\partial x^2}\\, dx$$\n" +
-                "   Berdasarkan Hukum II Newton $F_y = dm \\frac{\\partial^2 y}{\\partial t^2} = (\\mu\\, dx) \\frac{\\partial^2 y}{\\partial t^2}$:\n" +
+                "   Tinjau elemen tali bermassa \${'$'}dm = \\mu\\, dx$ di bawah tegangan \${'$'}T$. Komponen gaya vertikal netto pada sudut kemiringan kecil $\\theta$:\n" +
+                "   $$\${'$'}F_y = T \\sin(\\theta + d\\theta) - T \\sin\\theta \\approx T \\left( \\frac{\\partial y}{\\partial x}_{x+dx} - \\frac{\\partial y}{\\partial x}_x \\right) = T \\frac{\\partial^2 y}{\\partial x^2}\\, dx$$\n" +
+                "   Berdasarkan Hukum II Newton \${'$'}F_y = \${'$'}dm \\frac{\\partial^2 y}{\\partial t^2} = (\\mu\\, dx) \\frac{\\partial^2 y}{\\partial t^2}$:\n" +
                 "   $$\\frac{\\partial^2 y}{\\partial x^2} = \\frac{1}{v^2} \\frac{\\partial^2 y}{\\partial t^2} \\quad \\text{dengan } v = \\sqrt{\\frac{T}{\\mu}}$$\n\n" +
                 "2. Solusi Umum d'Alembert:\n" +
                 "   Solusi umum persamaan gelombang 1D adalah superposisi dua gelombang sembarang:\n" +
-                "   $$y(x, t) = f(x - vt) + g(x + vt)$$\n" +
-                "   • $f(x - vt)$: Gelombang merambat ke arah sumbu-$x$ positif (maju).\n" +
-                "   • $g(x + vt)$: Gelombang merambat ke arah sumbu-$x$ negatif (mundur).\n\n" +
-                "3. Refleksi & Transmisi pada Batas Medium (Impedansi Gelombang $Z = \\mu v = \\sqrt{T \\mu}$):\n" +
+                "   $$\${'$'}y(x, t) = \${'$'}f(x - vt) + \${'$'}g(x + vt)$$\n" +
+                "   • \${'$'}f(x - vt)$: Gelombang merambat ke arah sumbu-\${'$'}x$ positif (maju).\n" +
+                "   • \${'$'}g(x + vt)$: Gelombang merambat ke arah sumbu-\${'$'}x$ negatif (mundur).\n\n" +
+                "3. Refleksi & Transmisi pada Batas Medium (Impedansi Gelombang \${'$'}Z = \\mu v = \\sqrt{T \\mu}$):\n" +
                 "   Ketika gelombang datang dari medium 1 menuju batas sambungan medium 2:\n" +
-                "   • Koefisien Refleksi Amplitudo: $r = \\frac{A_r}{A_i} = \\frac{Z_1 - Z_2}{Z_1 + Z_2} = \\frac{v_2 - v_1}{v_2 + v_1}$.\n" +
-                "     - Jika medium 2 lebih rapat/kaku ($Z_2 > Z_1$ / ujung terikat): $r < 0$ (terjadi pembalikan fase $\\pi$ / $180^\\circ$).\n" +
-                "     - Jika medium 2 lebih ringan ($Z_2 < Z_1$ / ujung bebas): $r > 0$ (fase gelombang pantul tetap sama).\n" +
-                "   • Koefisien Transmisi Amplitudo: $t = \\frac{A_t}{A_i} = \\frac{2 Z_1}{Z_1 + Z_2} = \\frac{2 v_2}{v_1 + v_2}$ (selalu sefase positif).\n\n" +
+                "   • Koefisien Refleksi Amplitudo: \${'$'}r = \\frac{A_r}{A_i} = \\frac{Z_1 - Z_2}{Z_1 + Z_2} = \\frac{v_2 - v_1}{v_2 + v_1}$.\n" +
+                "     - Jika medium 2 lebih rapat/kaku (\${'$'}Z_2 > Z_1$ / ujung terikat): \${'$'}r < 0$ (terjadi pembalikan fase $\\pi$ / $180^\\circ$).\n" +
+                "     - Jika medium 2 lebih ringan (\${'$'}Z_2 < Z_1$ / ujung bebas): \${'$'}r > 0$ (fase gelombang pantul tetap sama).\n" +
+                "   • Koefisien Transmisi Amplitudo: \${'$'}t = \\frac{A_t}{A_i} = \\frac{2 Z_1}{Z_1 + Z_2} = \\frac{2 v_2}{v_1 + v_2}$ (selalu sefase positif).\n\n" +
                 "4. Transmisi Daya & Energi Gelombang:\n" +
-                "   Daya rata-rata yang ditransmisikan oleh gelombang sinusoidal berfrekuensi $\\omega$ dan amplitudo $A$:\n" +
-                "   $$P_{\\text{avg}} = \\frac{1}{2} \\mu v \\omega^2 A^2 = \\frac{1}{2} Z \\omega^2 A^2$$",
+                "   Daya rata-rata yang ditransmisikan oleh gelombang sinusoidal berfrekuensi $\\omega$ dan amplitudo \${'$'}A$:\n" +
+                "   $$\${'$'}P_{\\text{avg}} = \\frac{1}{2} \\mu v \\omega^2 A^2 = \\frac{1}{2} Z \\omega^2 A^2$$",
         intuitionPoints = listOf(
             "Pencocokan Impedansi (Impedance Matching, Z1 = Z2) menghasilkan koefisien refleksi nol (r = 0), artinya 100% daya gelombang terserap dan tertransmisikan tanpa ada energi yang terpantul balik!",
             "Gelombang berdiri (Standing Waves) adalah hasil interferensi superposisi antara gelombang datang dan gelombang pantul yang beramplitudo sama merambat berlawanan arah.",
@@ -888,12 +888,12 @@ object PhysicsLevel4Curriculum {
                 id = "q-gel-kont-2",
                 prompt = "Sebuah pulsa gelombang transversal pada tali merambat menuju sambungan dengan tali kedua yang memiliki impedansi mekanik jauh lebih besar (Z2 > Z1). Bagaimanakah karakteristik fase gelombang yang dipantulkan kembali ke medium pertama?",
                 type = "multiple_choice",
-                options = [
+                options = listOf(
                     "Gelombang pantul mengalami pembalikan fase sebesar 180 derajat (terbalik)",
                     "Gelombang pantul mempertahankan fase yang sama persis (tidak terbalik)",
                     "Gelombang pantul berhenti total dan energinya lenyap seketika",
                     "Frekuensi gelombang pantul meningkat menjadi dua kali lipat"
-                ],
+                ),
                 correctAnswer = "Gelombang pantul mengalami pembalikan fase sebesar 180 derajat (terbalik)",
                 hints = listOf(
                     "Rumus koefisien refleksi: r = (Z1 - Z2) / (Z1 + Z2).",
@@ -959,21 +959,21 @@ object PhysicsLevel4Curriculum {
                 "1. Persamaan Keadaan Gas Riil van der Waals:\n" +
                 "   Gas ideal mengabaikan volume molekul dan gaya antar-molekul. Johannes Diderik van der Waals memperhitungkan keduanya:\n" +
                 "   $$\\left( P + \\frac{a}{V_m^2} \\right) (V_m - b) = RT$$\n" +
-                "   • Parameter $a$: Mengoreksi gaya tarik-menarik antar-molekul (menurunkan tekanan yang menumbuk dinding wadah).\n" +
-                "   • Parameter $b$: Volume eksklusi efektif yang ditempati oleh 1 mol molekul gas itu sendiri ($b \\approx 4 \\times \\text{volume molekul}$).\\n" +
-                "   • Titik Kritis Gas: Titik di mana gas dan cairan tidak dapat dibedakan: $T_c = \\frac{8a}{27Rb}$, $P_c = \\frac{a}{27b^2}$, $V_c = 3b$.\n\n" +
+                "   • Parameter \${'$'}a$: Mengoreksi gaya tarik-menarik antar-molekul (menurunkan tekanan yang menumbuk dinding wadah).\n" +
+                "   • Parameter \${'$'}b$: Volume eksklusi efektif yang ditempati oleh 1 mol molekul gas itu sendiri (\${'$'}b \\approx 4 \\times \\text{volume molekul}).\n" +
+                "   • Titik Kritis Gas: Titik di mana gas dan cairan tidak dapat dibedakan: \${'$'}T_c = \\frac{8a}{27Rb}$, \${'$'}P_c = \\frac{a}{27b^2}$, \${'$'}V_c = 3b$.\n\n" +
                 "2. Empat Potensial Termodinamika & Relasi Maxwell:\n" +
-                "   Persamaan fundamental termodinamika mengintegrasikan Hukum I dan II ($dU = T dS - P dV$):\n" +
-                "   • Energi Dalam: $dU = T dS - P dV$\n" +
-                "   • Entalpi: $H = U + PV \\implies dH = T dS + V dP$\n" +
-                "   • Energi Bebas Helmholtz: $F = U - TS \\implies dF = -S dT - P dV$ (Sistem volume konstan)\n" +
-                "   • Energi Bebas Gibbs: $G = H - TS \\implies dG = -S dT + V dP$ (Sistem tekanan & suhu konstan)\n" +
+                "   Persamaan fundamental termodinamika mengintegrasikan Hukum I dan II (\${'$'}dU = T dS - P dV$):\n" +
+                "   • Energi Dalam: \${'$'}dU = T dS - P dV\n" +
+                "   • Entalpi: \${'$'}H = U + PV \\implies dH = T dS + V dP\n" +
+                "   • Energi Bebas Helmholtz: \${'$'}F = U - TS \\implies dF = -S dT - P dV$ (Sistem volume konstan)\n" +
+                "   • Energi Bebas Gibbs: \${'$'}G = H - TS \\implies dG = -S dT + V dP$ (Sistem tekanan & suhu konstan)\n" +
                 "   • Relasi Maxwell (Berdasarkan kesamaan turunan campuran parsial Schwartz $\\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x}$):\n" +
                 "     $$\\left( \\frac{\\partial T}{\\partial V} \\right)_S = -\\left( \\frac{\\partial P}{\\partial S} \\right)_V \\quad , \\quad \\left( \\frac{\\partial S}{\\partial V} \\right)_T = \\left( \\frac{\\partial P}{\\partial T} \\right)_V$$\n\n" +
                 "3. Fondasi Statistik Entropi Ludwig Boltzmann:\n" +
-                "   Entropi makroskopis $dS = \\frac{đQ_{\\text{rev}}}{T}$ terhubung ke dunia atomik melalui rumus Boltzmann:\n" +
-                "   $$S = k_B \\ln \\Omega$$\n" +
-                "   di mana $k_B = 1,3806 \\times 10^{-23}$ J/K dan $\\Omega$ adalah jumlah konfigurasi keadaan mikro (*microstates*) yang bersesuaian dengan keadaan makro sistem. Sistem selalu berevolusi menuju keadaan dengan $\\Omega$ maksimum (peluang terbesar).",
+                "   Entropi makroskopis \${'$'}dS = \\frac{đQ_{\\text{rev}}}{T}$ terhubung ke dunia atomik melalui rumus Boltzmann:\n" +
+                "   $$\${'$'}S = k_B \\ln \\Omega$$\n" +
+                "   di mana \${'$'}k_B = 1,3806 \\times 10^{-23}$ J/K dan $\\Omega$ adalah jumlah konfigurasi keadaan mikro (*microstates*) yang bersesuaian dengan keadaan makro sistem. Sistem selalu berevolusi menuju keadaan dengan $\\Omega$ maksimum (peluang terbesar).",
         intuitionPoints = listOf(
             "Mengapa gas yang mengembang bebas ke ruang hampa mengalami peningkatan entropi padahal tidak ada kalor yang diserap (Q = 0)? Karena volume yang membesar memberikan jumlah posisi mikro (Omega) yang berlipat ganda jauh lebih banyak!",
             "Kriteria spontanitas proses pada suhu dan tekanan konstan (kondisi bumi sehari-hari) adalah penurunan Energi Bebas Gibbs (dG < 0); kesetimbangan tercapai saat G berada pada titik minimum mutlak.",
@@ -1029,12 +1029,12 @@ object PhysicsLevel4Curriculum {
                 id = "q-termo-form-1",
                 prompt = "Pada persamaan gas riil van der Waals (P + a/V²)(V - b) = RT, parameter koreksi 'a' secara fisis merepresentasikan...",
                 type = "multiple_choice",
-                options = [
+                options = listOf(
                     "Koreksi terhadap gaya tarik-menarik antar-molekul gas",
                     "Volume fisik yang ditempati oleh molekul-molekul gas itu sendiri",
                     "Laju pemuaian termal gas pada tekanan tetap",
                     "Kecepatan rata-rata molekul gas saat bertumbukan"
-                ],
+                ),
                 correctAnswer = "Koreksi terhadap gaya tarik-menarik antar-molekul gas",
                 hints = listOf(
                     "Parameter a ditambahkan ke tekanan P.",
@@ -1185,12 +1185,12 @@ object PhysicsLevel4Curriculum {
                 id = "q-em-dif-1",
                 prompt = "Manakah dari modifikasi berikut yang ditambahkan oleh James Clerk Maxwell ke dalam Hukum Ampere sehingga melahirkan persamaan Ampere-Maxwell yang utuh dan simetris?",
                 type = "multiple_choice",
-                options = [
+                options = listOf(
                     "Suku arus pergeseran (mu_0 * epsilon_0 * dE/dt) yang dipicu oleh perubahan medan listrik terhadap waktu",
                     "Suku muatan monopol magnetik",
                     "Suku gaya gesek mekanik fluida",
                     "Suku potensial gravitasi Newton"
-                ],
+                ),
                 correctAnswer = "Suku arus pergeseran (mu_0 * epsilon_0 * dE/dt) yang dipicu oleh perubahan medan listrik terhadap waktu",
                 hints = listOf(
                     "Suku ini mengatasi pelanggaran kontinuitas arus pada kapasitor.",
@@ -1203,12 +1203,12 @@ object PhysicsLevel4Curriculum {
                 id = "q-em-dif-2",
                 prompt = "Persamaan diferensial parsial elektrostatik yang menyatakan bahwa laplacian potensial listrik bernilai nol (∇²V = 0) pada seluruh wilayah ruang yang bebas dari muatan listrik dinamakan...",
                 type = "multiple_choice",
-                options = [
+                options = listOf(
                     "Persamaan Laplace",
                     "Persamaan Poisson",
                     "Persamaan Navier-Stokes",
                     "Persamaan Schrödinger"
-                ],
+                ),
                 correctAnswer = "Persamaan Laplace",
                 hints = listOf(
                     "Bentuk khusus dari Persamaan Poisson saat massa jenis muatan rho = 0.",
@@ -1281,19 +1281,19 @@ object PhysicsLevel4Curriculum {
                 "   Karena $\\nabla \\cdot \\mathbf{E} = 0$, substitusikan persamaan (4):\n" +
                 "   $$-\\nabla^2 \\mathbf{E} = -\\frac{\\partial}{\\partial t}\\left( \\mu_0 \\epsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t} \\right) \\implies \\nabla^2 \\mathbf{E} = \\mu_0 \\epsilon_0 \\frac{\\partial^2 \\mathbf{E}}{\\partial t^2}$$\n" +
                 "   Ini adalah persamaan diferensial gelombang 3 dimensi $\\nabla^2 \\mathbf{E} = \\frac{1}{c^2} \\frac{\\partial^2 \\mathbf{E}}{\\partial t^2}$ dengan kecepatan rambat:\n" +
-                "   $$c = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}} = \\frac{1}{\\sqrt{(4\\pi \\times 10^{-7})(8,854 \\times 10^{-12})}} \\approx 2,998 \\times 10^8 \\text{ m/s}$$\n\n" +
+                "   $$\${'$'}c = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}} = \\frac{1}{\\sqrt{(4\\pi \\times 10^{-7})(8,854 \\times 10^{-12})}} \\approx 2,998 \\times 10^8 \\text{ m/s}$$\n\n" +
                 "2. Sifat Gelombang Elektromagnetik Transversal:\n" +
                 "   • Medan $\\mathbf{E}$ dan medan $\\mathbf{B}$ saling tegak lurus satu sama lain dan keduanya tegak lurus terhadap arah rambat $\\mathbf{k}$ (Gelombang Transversal).\n" +
-                "   • Hubungan amplitudo medan pada setiap saat: $E = c B$.\n\n" +
+                "   • Hubungan amplitudo medan pada setiap saat: \${'$'}E = c B$.\n\n" +
                 "3. Aliran Energi & Vektor Poynting:\n" +
                 "   Fluks daya energi gelombang elektromagnetik per satuan luas dinyatakan oleh Vektor Poynting $\\mathbf{S}$:\n" +
                 "   $$\\mathbf{S} = \\frac{1}{\\mu_0} (\\mathbf{E} \\times \\mathbf{B})$$\n" +
                 "   • Satuan: $\\text{Watt/m}^2$.\n" +
-                "   • Intensitas rata-rata gelombang sinusoidal: $I = \\langle S \\rangle = \\frac{E_{\\text{max}} B_{\\text{max}}}{2\\mu_0} = \\frac{E_{\\text{max}}^2}{2\\mu_0 c} = \\frac{1}{2} c \\epsilon_0 E_{\\text{max}}^2$.\n\n" +
+                "   • Intensitas rata-rata gelombang sinusoidal: \${'$'}I = \\langle S \\rangle = \\frac{E_{\\text{max}} B_{\\text{max}}}{2\\mu_0} = \\frac{E_{\\text{max}}^2}{2\\mu_0 c} = \\frac{1}{2} c \\epsilon_0 E_{\\text{max}}^2$.\n\n" +
                 "4. Tekanan Radiasi (*Radiation Pressure*):\n" +
-                "   Gelombang elektromagnetik membawa momentum linear $p = \\frac{U}{c}$.\n" +
-                "   • Penyerapan Sempurna (*Blackbody*): $P_{\\text{rad}} = \\frac{I}{c}$.\n" +
-                "   • Pemantulan Sempurna (*Cermin*): $P_{\\text{rad}} = \\frac{2I}{c}$.",
+                "   Gelombang elektromagnetik membawa momentum linear \${'$'}p = \\frac{U}{c}$.\n" +
+                "   • Penyerapan Sempurna (*Blackbody*): \${'$'}P_{\\text{rad}} = \\frac{I}{c}$.\n" +
+                "   • Pemantulan Sempurna (*Cermin*): \${'$'}P_{\\text{rad}} = \\frac{2I}{c}$.",
         intuitionPoints = listOf(
             "Cahaya matahari membawa daya 1.360 W/m² di orbit bumi, menghasilkan gaya dorong tekanan radiasi sekitar 9 mikroNewton per meter persegi pada layar cermin reflektif.",
             "Konstanta permitivitas vakum ε0 dan permeabilitas vakum μ0 yang diukur dari eksperimen listrik statis dan magnet kawat secara ajaib memprediksi kecepatan cahaya mutlak di ruang angkasa!",
@@ -1365,12 +1365,12 @@ object PhysicsLevel4Curriculum {
                 id = "q-em-poynt-2",
                 prompt = "Arah aliran daya energi gelombang elektromagnetik yang dinyatakan oleh Vektor Poynting S = (1/mu_0) (E × B) adalah...",
                 type = "multiple_choice",
-                options = [
+                options = listOf(
                     "Searah dengan arah perambatan gelombang elektromagnetik (tegak lurus terhadap E dan B)",
                     "Selalu sejajar dengan medan listrik E",
                     "Selalu sejajar dengan medan magnet B",
                     "Berlawanan arah dengan arah perambatan gelombang"
-                ],
+                ),
                 correctAnswer = "Searah dengan arah perambatan gelombang elektromagnetik (tegak lurus terhadap E dan B)",
                 hints = listOf(
                     "Operasi perkalian silang (E × B) menghasilkan vektor yang tegak lurus terhadap bidang E dan B.",
@@ -1435,20 +1435,20 @@ object PhysicsLevel4Curriculum {
                 "1. Prinsip Fermat (Principle of Least Time):\n" +
                 "   Berkas cahaya yang merambat antara dua titik mengambil jalur optik yang membutuhkan waktu tempuh stasioner (ekstrem/tersingkat):\n" +
                 "   $$\\delta \\int_{A}^{B} n(\\mathbf{r})\\, ds = 0$$\n" +
-                "   • Dari prinsip ini, Hukum Pembiasan Snellius ($n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$) diturunkan langsung dari minimisasi waktu tempuh $t = \\frac{s_1}{v_1} + \\frac{s_2}{v_2}$.\n\n" +
+                "   • Dari prinsip ini, Hukum Pembiasan Snellius (\${'$'}n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$) diturunkan langsung dari minimisasi waktu tempuh \${'$'}t = \\frac{s_1}{v_1} + \\frac{s_2}{v_2}$.\n\n" +
                 "2. Optik Matriks Transfer Berkas (Ray Transfer Matrix / Matriks ABCD):\n" +
-                "   Sinar paraksial pada jarak ketinggian $y$ dan sudut kemiringan $\\theta$ direpresentasikan oleh vektor kolom $\\begin{pmatrix} y \\\\ \\theta \\end{pmatrix}$.\n" +
+                "   Sinar paraksial pada jarak ketinggian \${'$'}y$ dan sudut kemiringan $\\theta$ direpresentasikan oleh vektor kolom $\\begin{pmatrix} y \\\\ \\theta \\end{pmatrix}$.\n" +
                 "   Transformasi melewati sistem optik dinyatakan oleh matriks $2 \\times 2$:\n" +
                 "   $$\\begin{pmatrix} y_2 \\\\ \\theta_2 \\end{pmatrix} = \\begin{pmatrix} A & B \\\\ C & D \\end{pmatrix} \\begin{pmatrix} y_1 \\\\ \\theta_1 \\end{pmatrix}$$\n" +
-                "   • Ruang Bebas Berjarak $d$: $M_{\\text{ruang}} = \\begin{pmatrix} 1 & d \\\\ 0 & 1 \\end{pmatrix}$\n" +
-                "   • Lensa Tipis Berkekuatan Fokus $f$: $M_{\\text{lensa}} = \\begin{pmatrix} 1 & 0 \\\\ -1/f & 1 \\end{pmatrix}$\n" +
+                "   • Ruang Bebas Berjarak \${'$'}d$: \${'$'}M_{\\text{ruang}} = \\begin{pmatrix} 1 & d \\\\ 0 & 1 \\end{pmatrix}$\n" +
+                "   • Lensa Tipis Berkekuatan Fokus \${'$'}f$: \${'$'}M_{\\text{lensa}} = \\begin{pmatrix} 1 & 0 \\\\ -1/f & 1 \\end{pmatrix}$\n" +
                 "   • Determinan matriks transfer selalu bernilai satu: $\\det(M) = AD - BC = 1$.\n\n" +
                 "3. Interferometer Michelson (Albert A. Michelson 1881):\n" +
                 "   Alat ukur interferensi pembagian amplitudo paling presisi di dunia:\n" +
-                "   • Berkas cahaya koheren dari laser mengenai Cermin Pemecah Berkas (*Beam Splitter*) 50:50; berkas 1 menuju Cermin Tetap $M_1$ dan berkas 2 menuju Cermin Bergerak $M_2$.\n" +
+                "   • Berkas cahaya koheren dari laser mengenai Cermin Pemecah Berkas (*Beam Splitter*) 50:50; berkas 1 menuju Cermin Tetap \${'$'}M_1$ dan berkas 2 menuju Cermin Bergerak \${'$'}M_2$.\n" +
                 "   • Kedua berkas dipantulkan kembali dan berinterferensi di detektor/layar.\n" +
-                "   • Jika cermin bergerak digeser sejauh $\\Delta d$, beda lintasan optik berubah sebesar $2 \\Delta d$. Hubungan dengan jumlah pergeseran rumbai cincin $m$:\n" +
-                "     $$2 \\Delta d = m \\lambda \\implies \\Delta d = m \\frac{\\lambda}{2}$$\n" +
+                "   • Jika cermin bergerak digeser sejauh $\\Delta d$, beda lintasan optik berubah sebesar $2 \\Delta d$. Hubungan dengan jumlah pergeseran rumbai cincin \${'$'}m$:\n" +
+                "     $$2 \\Delta d = \${'$'}m \\lambda \\implies \\Delta d = \${'$'}m \\frac{\\lambda}{2}$$\n" +
                 "   • Instrumen ini digunakan dalam eksperimen bersejarah Michelson-Morley (membuktikan eter tidak ada) dan menjadi basis detektor gelombang gravitasi modern LIGO!",
         intuitionPoints = listOf(
             "Interferometer LIGO (Laser Interferometer Gravitational-Wave Observatory) mampu mendeteksi pergeseran cermin sejauh 10⁻¹⁸ meter (seperseribu diameter proton!) menggunakan prinsip Interferometer Michelson berlengan 4 kilometer.",
@@ -1522,12 +1522,12 @@ object PhysicsLevel4Curriculum {
                 id = "q-opt-inter-2",
                 prompt = "Prinsip Fermat dalam optika geometris dan gelombang menyatakan bahwa berkas cahaya merambat antara dua titik melalui lintasan yang...",
                 type = "multiple_choice",
-                options = [
+                options = listOf(
                     "Memerlukan waktu tempuh paling stasioner/tersingkat",
                     "Memiliki jarak geometri lintasan paling pendek secara garis lurus",
                     "Memiliki energi foton paling besar",
                     "Selalu menembus medium yang paling rapat terlebih dahulu"
-                ],
+                ),
                 correctAnswer = "Memerlukan waktu tempuh paling stasioner/tersingkat",
                 hints = listOf(
                     "Fermat merumuskan prinsip waktu terkecil (Principle of Least Time).",
@@ -1590,8 +1590,8 @@ object PhysicsLevel4Curriculum {
         intuitionTitle = "Revolusi Subatomik: Mekanika Gelombang Kuantum & Probabilitas Born",
         intuitionBody = "Mekanika kuantum menggantikan kepastian mekanistik deterministik Newton dengan formulasi probabilistik fungsi gelombang yang mengatur perilaku elektron, atom, dan semikonduktor.\n\n" +
                 "1. Keruntuhan Fisika Klasik & Dualisme Gelombang-Partikel:\n" +
-                "   • Masalah Radiasi Benda Hitam: Diselesaikan Max Planck (1900) dengan mempostulatkan kuantisasi energi $E = n h \\nu$.\n" +
-                "   • Efek Fotoelektrik Einstein (1905): Membuktikan cahaya tersusun dari paket foton terkuantisasi $E = h\\nu = \\hbar \\omega$.\n" +
+                "   • Masalah Radiasi Benda Hitam: Diselesaikan Max Planck (1900) dengan mempostulatkan kuantisasi energi \${'$'}E = n h \\nu$.\n" +
+                "   • Efek Fotoelektrik Einstein (1905): Membuktikan cahaya tersusun dari paket foton terkuantisasi \${'$'}E = h\\nu = \\hbar \\omega$.\n" +
                 "   • Gelombang Materi Louis de Broglie (1924): Partikel bermassa memiliki panjang gelombang materi $\\lambda = \\frac{h}{p}$.\n\n" +
                 "2. Prinsip Ketidakpastian Heisenberg (1927):\n" +
                 "   Kuantitas yang tidak komutatif tidak dapat diukur secara bersamaan dengan presisi tak terbatas:\n" +
@@ -1599,19 +1599,19 @@ object PhysicsLevel4Curriculum {
                 "   di mana $\\hbar = \\frac{h}{2\\pi} = 1,05457 \\times 10^{-34}$ J·s.\n\n" +
                 "3. Postulat Fungsi Gelombang & Interpretasi Born:\n" +
                 "   Keadaan kuantum suatu partikel dideskripsikan sepenuhnya oleh fungsi gelombang kompleks $\\psi(x, t)$.\n" +
-                "   • Interpretasi Probabilitas Max Born: Probabilitas menemukan partikel pada selang $x$ hingga $x + dx$ adalah:\n" +
-                "     $$P(x)\\, dx = |\\psi(x, t)|^2\\, dx = \\psi^*(x, t) \\psi(x, t)\\, dx$$\n" +
+                "   • Interpretasi Probabilitas Max Born: Probabilitas menemukan partikel pada selang \${'$'}x$ hingga \${'$'}x + dx$ adalah:\n" +
+                "     $$\${'$'}P(x)\\, dx = |\\psi(x, t)|^2\\, dx = \\psi^*(x, t) \\psi(x, t)\\, dx$$\n" +
                 "   • Syarat Normalisasi (Kepastian 100% menemukan partikel di alam semesta):\n" +
                 "     $$\\int_{-\\infty}^{\\infty} |\\psi(x, t)|^2\\, dx = 1$$\n\n" +
                 "4. Persamaan Schrödinger Bebas Waktu 1 Dimensi (Time-Independent Schrödinger Equation / TISE):\n" +
-                "   Untuk keadaan stasioner berenergi $E$ di dalam medan potensial $U(x)$:\n" +
-                "   $$-\\frac{\\hbar^2}{2m} \\frac{d^2 \\psi(x)}{dx^2} + U(x) \\psi(x) = E \\psi(x)$$\n" +
-                "   • Kasus Klasik: Partikel dalam Sumur Potensial Tak Hingga Lebar $L$ ($U = 0$ untuk $0 < x < L$, $U = \\infty$ di luar):\n" +
+                "   Untuk keadaan stasioner berenergi \${'$'}E$ di dalam medan potensial \${'$'}U(x)$:\n" +
+                "   $$-\\frac{\\hbar^2}{2m} \\frac{d^2 \\psi(x)}{dx^2} + U(x) \\psi(x) = \${'$'}E \\psi(x)$$\n" +
+                "   • Kasus Klasik: Partikel dalam Sumur Potensial Tak Hingga Lebar \${'$'}L$ (\${'$'}U = 0 untuk $0 < x < L$, \${'$'}U = \\infty$ di luar):\n" +
                 "     $$\\psi_n(x) = \\sqrt{\\frac{2}{L}} \\sin\\left( \\frac{n\\pi x}{L} \\right) \\quad (n = 1, 2, 3, \\dots)$$\n" +
                 "     Tingkat energi terkuantisasi diskrit:\n" +
-                "     $$E_n = \\frac{n^2 \\pi^2 \\hbar^2}{2m L^2} = \\frac{n^2 h^2}{8m L^2}$$\n" +
-                "     Energi titik nol terendah (keadaan dasar $n=1$) tidak nol ($E_1 > 0$), membuktikan partikel kuantum tidak pernah bisa diam total!\n" +
-                "   • Efek Terobosan Kuantum (*Quantum Tunneling*): Jika partikel membentur sawar potensial berhingga $U_0 > E$, fungsi gelombang tidak seketika nol melainkan meluruh secara eksponensial $e^{-\\kappa x}$, menghasilkan peluang transmisi menembus sawar yang tidak nol!",
+                "     $$\${'$'}E_n = \\frac{n^2 \\pi^2 \\hbar^2}{2m L^2} = \\frac{n^2 h^2}{8m L^2}$$\n" +
+                "     Energi titik nol terendah (keadaan dasar \${'$'}n=1$) tidak nol (\${'$'}E_1 > 0$), membuktikan partikel kuantum tidak pernah bisa diam total!\n" +
+                "   • Efek Terobosan Kuantum (*Quantum Tunneling*): Jika partikel membentur sawar potensial berhingga \${'$'}U_0 > E$, fungsi gelombang tidak seketika nol melainkan meluruh secara eksponensial \${'$'}e^{-\\kappa x}$, menghasilkan peluang transmisi menembus sawar yang tidak nol!",
         intuitionPoints = listOf(
             "Matahari bersinar karena Efek Terobosan Kuantum: suhu inti matahari sebenarnya terlalu dingin menurut fisika klasik untuk memicu fusi proton; hanya berkat tunneling kuantum proton dapat menembus sawar tolak-menolak Coulomb untuk berfusi!",
             "Memori Flash SSD smartphone dan laptop bekerja dengan menyuntikkan elektron menembus lapisan isolator oksida silikon melalui terobosan kuantum Fowler-Nordheim.",
@@ -1669,12 +1669,12 @@ object PhysicsLevel4Curriculum {
                 id = "q-kuantum-sch-1",
                 prompt = "Berdasarkan prinsip ketidakpastian Heisenberg delta_x * delta_p >= hbar / 2, jika posisi sebuah elektron diketahui dengan kepastian mutlak yang sempurna (delta_x = 0), berapakah nilai ketidakpastian momentum (delta_p) elektron tersebut?",
                 type = "multiple_choice",
-                options = [
+                options = listOf(
                     "Tak terhingga (tidak dapat diketahui sama sekali)",
                     "Nol (diketahui pasti)",
                     "Sama dengan konstanta Planck h",
                     "Sama dengan kecepatan cahaya c"
-                ],
+                ),
                 correctAnswer = "Tak terhingga (tidak dapat diketahui sama sekali)",
                 hints = listOf(
                     "Pertidaksamaan Heisenberg: delta_p >= hbar / (2 · delta_x).",

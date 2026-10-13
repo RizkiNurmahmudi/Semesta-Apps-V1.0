@@ -400,14 +400,12 @@ fun ProfileScreen(
         }
 
         // List Kartu Lencana
-        val filteredBadges = remember(badgeFilter, earnedBadgeIds) {
-            BadgeRegistry.allDetailedBadges.filter { b ->
-                val isEarned = earnedBadgeIds.contains(b.item.id)
-                when (badgeFilter) {
-                    "EARNED" -> isEarned
-                    "LOCKED" -> !isEarned
-                    else -> true
-                }
+        val filteredBadges = BadgeRegistry.allDetailedBadges.filter { b ->
+            val isEarned = earnedBadgeIds.contains(b.item.id)
+            when (badgeFilter) {
+                "EARNED" -> isEarned
+                "LOCKED" -> !isEarned
+                else -> true
             }
         }
 
